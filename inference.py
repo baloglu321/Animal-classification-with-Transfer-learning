@@ -8,7 +8,7 @@ from model import ExampleModel
 from visualization import prepprocess_image, visualize_prediction
 
 data_dir = "./model_dataset/train"
-model_path = "./model/animal-MN-V4_best.pth"
+model_path = "./model/animal-MN-V3_best.pth"
 test_image_path = "model_dataset/test/bat/image_9.png"
 image_size = (128, 128)
 num_classes = len(os.listdir(data_dir))
