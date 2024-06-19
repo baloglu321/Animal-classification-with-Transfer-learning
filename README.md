@@ -107,14 +107,17 @@ Modeli web arayüzü ile kullanıma sunun:
 ----------------------
 
 ├───model_dataset
+
 │   ├───test
 │   │   ├───antelope
 │   │   ├───badger
 │   │   ├───bat
 │   │   ├───bear
+
 .   .   .
 .   .   .
 .   .   .
+
 │   └───train
 │       ├───antelope
 │       ├───badger
