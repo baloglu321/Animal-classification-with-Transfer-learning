@@ -4,7 +4,7 @@ import shutil
 
 import tqdm
 
-dataset_path = "./processed_images"
+dataset_path = "./dataset"
 train_path = "./model_dataset/train"
 test_path = "./model_dataset/test"
 split_ratio = 0.8
