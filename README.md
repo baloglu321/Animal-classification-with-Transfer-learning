@@ -109,9 +109,13 @@ Modeli web arayüzü ile kullanıma sunun:
 ├───model_dataset
 
 │   ├───test
+
 │   │   ├───antelope
+
 │   │   ├───badger
+
 │   │   ├───bat
+
 │   │   ├───bear
 
 .   .   .
@@ -119,10 +123,15 @@ Modeli web arayüzü ile kullanıma sunun:
 .   .   .
 
 │   └───train
+
 │       ├───antelope
+
 │       ├───badger
+
 │       ├───bat
+
 │       ├───bear
+
 .    .  .
 
 
