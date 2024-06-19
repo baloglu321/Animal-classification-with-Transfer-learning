@@ -1,11 +1,11 @@
-### Animal-classification-with-gradio
+# Animal-classification-with-gradio
 
 Bu proje, bir yapay zeka modelinin baştan sona tamamını içerir. Proje, veri ön işleme, özellik çıkarımı, veri kümesi kümeleme, veri ayırma, model eğitimi ve web arayüzü ile modeli sunma adımlarını kapsamaktadır.
 
-# Hakkında
+## Hakkında
 Bu proje, bir yapay zeka modelinin veri ön işleme aşamasından, modelin eğitilmesine ve sonrasında web arayüzü ile kullanıcıya sunulmasına kadar tüm adımları içermektedir. Proje, mobilenetv3_large_100 tabanlı bir model kullanarak çeşitli hayvan türlerini sınıflandırmak için tasarlanmıştır.
 
-# Özellikler
+## Özellikler
 -Resimlerin ön işlenmesi ve ilgisiz kısımlarının kesilmesi
 
 -Resimlerden vektörlerin çıkarılması ve embeddinglerin oluşturulması
@@ -19,10 +19,10 @@ Bu proje, bir yapay zeka modelinin veri ön işleme aşamasından, modelin eğit
 -Gradio kullanarak web arayüzü ile modelin sunumu
 
 
-## Kurulum
+# Kurulum
 ----------------------
 
-# Gereksinimler
+## Gereksinimler
 ----------------------
 
 Projeyi yerel makinenize kurmadan önce aşağıdaki araçların kurulu olduğundan emin olun:
@@ -55,19 +55,19 @@ Projeyi yerel makinenize kurmadan önce aşağıdaki araçların kurulu olduğun
 
 -img2vec_pytorch
 
-## Adımlar
+# Adımlar
 ----------------------
 
-# Repoyu klonlayın
+## Repoyu klonlayın
 
     git clone https://github.com/baloglu321/Animal-classification-with-gradio.git
 
 
-# Proje dizinine geçin
+## Proje dizinine geçin
     
     cd Animal-classification-with-gradio
 
-## Kullanım
+# Kullanım
 ----------------------
 
 Proje, aşağıdaki adımları takip ederek kullanılabilir:
