@@ -21,10 +21,14 @@ Bu proje, bir yapay zeka modelinin veri ön işleme aşamasından, modelin eğit
 
 Projeyi yerel makinenize kurmadan önce aşağıdaki araçların kurulu olduğundan emin olun:
 
-Python 3.8+
-Pytorch (mümkünse cuda ile)
-Torchvision
-timm
+-Python 3.8+
+
+-Pytorch (mümkünse cuda ile)
+
+-Torchvision
+
+-timm
+
 tqdm
 scipy
 sklearn
