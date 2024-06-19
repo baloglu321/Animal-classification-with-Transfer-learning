@@ -1,4 +1,4 @@
-## Animal-classification-with-gradio
+### Animal-classification-with-gradio
 
 Bu proje, bir yapay zeka modelinin baştan sona tamamını içerir. Proje, veri ön işleme, özellik çıkarımı, veri kümesi kümeleme, veri ayırma, model eğitimi ve web arayüzü ile modeli sunma adımlarını kapsamaktadır.
 
@@ -7,11 +7,17 @@ Bu proje, bir yapay zeka modelinin veri ön işleme aşamasından, modelin eğit
 
 # Özellikler
 -Resimlerin ön işlenmesi ve ilgisiz kısımlarının kesilmesi
+
 -Resimlerden vektörlerin çıkarılması ve embeddinglerin oluşturulması
+
 -PCA ve KMeans kullanarak veri kümesinin kümeleme analizi
+
 -Veri kümesinin eğitim ve test olarak ayrılması
+
 -Mobilenetv3_large_100 modeli ile eğitilmesi
+
 -Gradio kullanarak web arayüzü ile modelin sunumu
+
 
 ## Kurulum
 ----------------------
@@ -29,16 +35,25 @@ Projeyi yerel makinenize kurmadan önce aşağıdaki araçların kurulu olduğun
 
 -timm
 
-tqdm
-scipy
-sklearn
-opencv
-PIL
-matplotlib
-gradio
-pandas
-numpy
-img2vec_pytorch
+-tqdm
+
+-scipy
+
+-sklearn
+
+-opencv
+
+-PIL
+
+-matplotlib
+
+-gradio
+
+-pandas
+
+-numpy
+
+-img2vec_pytorch
 
 ## Adımlar
 ----------------------
@@ -92,20 +107,35 @@ Modeli web arayüzü ile kullanıma sunun:
 ----------------------
 
 ├───model_dataset
+
 │   ├───test
+
 │   │   ├───antelope
+
 │   │   ├───badger
+
 │   │   ├───bat
+
 │   │   ├───bear
+
 .   .   .
+
 .   .   .
+
 .   .   .
+
 │   └───train
+
 │       ├───antelope
+
 │       ├───badger
+
 │       ├───bat
+
 │       ├───bear
+
 .    .  .
+
 
 ## Notlar
 ----------------------
@@ -115,10 +145,15 @@ Fakat clustring vb. algoritmaların çaçlıştılması için sırsıyla:
 1-Raw dataset oluştulmalı:
 -Bulunulan dizinde "raw_images" isminde bir dizin oluşturularak aşağıdaki görülen şekildeki dosya yapısıyla önişlenecekd data verilmeli:
 ├───raw_images
+
 │   ├───antelope
+
 │   ├───badger
+
 │   ├───bat
+
 │   ├───bear
+
 
 -Sonrasında "preprocess.py dosyası çalıştırılır. Bu çalıştırıldığında "processed_images" isimli bir dizin oluşur ve kesilen ve filtrelen görüntüler buraya kaydedilir. Modele oluşturulacak girdiye göre maximum ve minimum görüntü boyutlarını kod içerisinden belirleyebilrisiniz. Varsayılan: max:1024 min:224
 -Resimler içerisinde ilgisiz dataların belirlenmesi için vektörler üzerinden kmeans ile clustring işlemi uygulamak için öncelikle "get_embeddings.py" çalıştırılır. Bu algoritma "embeddings" isimli klasörün içerisine resimlerin vektörlerini csv formatında kaydeder. 
