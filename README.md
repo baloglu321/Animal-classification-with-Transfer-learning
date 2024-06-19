@@ -143,7 +143,9 @@ Modeli web arayüzü ile kullanıma sunun:
 Training için yukardaki dosya yapısı ile verilerin verilmesi ve Train.py dosyasının çalıştırılması yeterlidir. 
 Fakat clustring vb. algoritmaların çaçlıştılması için sırsıyla:
 1-Raw dataset oluştulmalı:
+
 -Bulunulan dizinde "raw_images" isminde bir dizin oluşturularak aşağıdaki görülen şekildeki dosya yapısıyla önişlenecekd data verilmeli:
+
 ├───raw_images
 
 │   ├───antelope
@@ -156,14 +158,18 @@ Fakat clustring vb. algoritmaların çaçlıştılması için sırsıyla:
 
 
 -Sonrasında "preprocess.py dosyası çalıştırılır. Bu çalıştırıldığında "processed_images" isimli bir dizin oluşur ve kesilen ve filtrelen görüntüler buraya kaydedilir. Modele oluşturulacak girdiye göre maximum ve minimum görüntü boyutlarını kod içerisinden belirleyebilrisiniz. Varsayılan: max:1024 min:224
+
 -Resimler içerisinde ilgisiz dataların belirlenmesi için vektörler üzerinden kmeans ile clustring işlemi uygulamak için öncelikle "get_embeddings.py" çalıştırılır. Bu algoritma "embeddings" isimli klasörün içerisine resimlerin vektörlerini csv formatında kaydeder. 
+
 -"clustring.py" dosyası çalıştırılarak kaydedilen vektörler okunur ve pca ve kmeans algoritmaları ile veri setinde ilgili görülen datalar "clusters" isimli dizine her class için ayrılarak kaydedilir. Bu clusterlardan ilgisiz görülenler manuel olarak silinmelidir. Birden fazla cluster bir araya getirilirse tekrarlanan veri oluşabilir.
+
 -Manuel seçilen datalar yine raw images de kullanılan formatta "dataset" dosya yoluna kopyalanır. Sonrasında "data_splitter.py" çalıştırılır. Bu kod verileri %80-20 olarak şekilde böler ve train dosya formatında "model_dataset" dizinine kaydeder.
 
 
 ## Görüntüler
 ----------------------
 ![Ekran görüntüsü 2024-06-19 182220](https://github.com/baloglu321/Animal-classification-with-gradio/assets/98214109/b7c22038-35b4-45df-85a5-245348581623)
+
 ![Ekran görüntüsü 2024-06-19 183127](https://github.com/baloglu321/Animal-classification-with-gradio/assets/98214109/44697ebb-bd7c-4985-b9cb-254ee67aeead)
 
 
