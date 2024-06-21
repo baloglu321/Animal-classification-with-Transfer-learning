@@ -1,35 +1,35 @@
 # Animal-classification-with-gradio
 
-Bu proje, bir yapay zeka modelinin baştan sona tamamını içerir. Proje, veri ön işleme, özellik çıkarımı, veri kümesi kümeleme, veri ayırma, model eğitimi ve web arayüzü ile modeli sunma adımlarını kapsamaktadır.
+This project includes the complete development of an artificial intelligence model from start to finish. The project includes data pre-processing, feature extraction, dataset clustering, data separation, model training and presenting the model with a web interface.
 
-## Hakkında
-Bu proje, bir yapay zeka modelinin veri ön işleme aşamasından, modelin eğitilmesine ve sonrasında web arayüzü ile kullanıcıya sunulmasına kadar tüm adımları içermektedir. Proje, mobilenetv3_large_100 tabanlı bir model kullanarak çeşitli hayvan türlerini sınıflandırmak için tasarlanmıştır.
+## About
+This project includes all the steps of an artificial intelligence model from data pre-processing, to training the model and then presenting it to the user with a web interface. The project is designed to classify various animal species using a model based on mobilenetv3_large_100.
 
-## Özellikler
--Resimlerin ön işlenmesi ve ilgisiz kısımlarının kesilmesi
+## Features
+Pre-processing of images and cutting out irrelevant parts
 
--Resimlerden vektörlerin çıkarılması ve embeddinglerin oluşturulması
+-Extracting vectors from images and creating embeddings
 
--PCA ve KMeans kullanarak veri kümesinin kümeleme analizi
+-Cluster analysis of the dataset using PCA and KMeans
 
--Veri kümesinin eğitim ve test olarak ayrılması
+-Separation of the dataset into training and testing
 
--Mobilenetv3_large_100 modeli ile eğitilmesi
+Training with the -Mobilenetv3_large_100 model
 
--Gradio kullanarak web arayüzü ile modelin sunumu
+-Presentation of the model with web interface using Gradio
 
 
-# Kurulum
+# Installation
 ----------------------
 
-## Gereksinimler
+## Requirements
 ----------------------
 
-Projeyi yerel makinenize kurmadan önce aşağıdaki araçların kurulu olduğundan emin olun:
+Before installing the project on your local machine, make sure you have the following tools installed:
 
 -Python 3.8+
 
--Pytorch (mümkünse cuda ile)
+-Pytorch (with cuda if possible)
 
 -Torchvision
 
@@ -55,116 +55,117 @@ Projeyi yerel makinenize kurmadan önce aşağıdaki araçların kurulu olduğun
 
 -img2vec_pytorch
 
-# Adımlar
+# Steps
 ----------------------
 
-## Repoyu klonlayın
+## Clone the repo
 
     git clone https://github.com/baloglu321/Animal-classification-with-gradio.git
 
 
-## Proje dizinine geçin
+## Switch to project directory
     
     cd Animal-classification-with-gradio
 
-# Kullanım
+# Use
 ----------------------
 
-Proje, aşağıdaki adımları takip ederek kullanılabilir:
+The project can be used by following the steps below:
 
-1. Veri Ön İşleme
-Veri kümesini alıp ilgisiz kısımları kesin:
+1. Data Preprocessing
+Take the dataset and cut out the irrelevant parts:
 
         python preprocess.py
 
-2. Özellik Çıkarımı
-Resimlerin embeddinglerini çıkarın ve kaydedin:
+2. Feature Extraction
+Extract the embeddings of the images and save them:
 
         python get_embedings.py
 
-3. Veri Kümesi Kümeleme
-Embeddingleri okuyun ve PCA ve KMeans algoritmalarını kullanarak veri setini kümeleyin:
+3. Dataset Clustering
+Read embeddings and cluster the dataset using PCA and KMeans algorithms:
 
         python clustring.py
 
-4. Veri Ayırma
-Veri setini %80-20 oranında eğitim ve test olarak ayırın:
+4. Data Separation
+Split the data set 80-20% between training and testing:
 
         python data_splitter.py
 
-5. Model Eğitimi
-Modeli eğitin:
+5. Model Training
+Train the model:
 
         python train.py
 
-6. Web Arayüzü ile Model Sunumu
-Modeli web arayüzü ile kullanıma sunun:
+6. Model Presentation via Web Interface
+Make the model available via web interface:
 
         python gradio_infer.py
 
 
-## Train için dosya yapısı
+## File structure for Train
 ----------------------
 
 ├───model_dataset
 
-│   ├───test
+│ ├───test
 
-│   │   ├───antelope
+│ │ ├───antelope
 
-│   │   ├───badger
+│ │ ├───badger
 
-│   │   ├───bat
+│ │ ├───bat
 
-│   │   ├───bear
+│ │ ├───bear
 
 .   .   .
 .   .   .
 .   .   .
 
-│   └───train
+│ └────train
 
-│       ├───antelope
+│ ├───antelope
 
-│       ├───badger
+│ ├───badger
 
-│       ├───bat
+│ ├───bat
 
-│       ├───bear
+│ ├───bear
 
 .    .  .
 
 
-## Notlar
+## Notes
 ----------------------
 
-Training için yukardaki dosya yapısı ile verilerin verilmesi ve Train.py dosyasının çalıştırılması yeterlidir. 
-Fakat clustring vb. algoritmaların çaçlıştılması için sırsıyla:
-1-Raw dataset oluştulmalı:
 
--Bulunulan dizinde "raw_images" isminde bir dizin oluşturularak aşağıdaki görülen şekildeki dosya yapısıyla önişlenecekd data verilmeli:
+For Training, it is enough to give the data with the file structure above and run Train.py. 
+But clustring etc. in order to run the algorithms:
+1-Create a raw dataset:
+
+-Create a directory named "raw_images" in the current directory and give the data to be preprocessed with the file structure as shown below:
 
 ├───raw_images
 
-│   ├───antelope
+│ ├───antelope
 
-│   ├───badger
+│ ├───badger
 
-│   ├───bat
+│ ├───bat
 
-│   ├───bear
-
-
--Sonrasında "preprocess.py dosyası çalıştırılır. Bu çalıştırıldığında "processed_images" isimli bir dizin oluşur ve kesilen ve filtrelen görüntüler buraya kaydedilir. Modele oluşturulacak girdiye göre maximum ve minimum görüntü boyutlarını kod içerisinden belirleyebilrisiniz. Varsayılan: max:1024 min:224
-
--Resimler içerisinde ilgisiz dataların belirlenmesi için vektörler üzerinden kmeans ile clustring işlemi uygulamak için öncelikle "get_embeddings.py" çalıştırılır. Bu algoritma "embeddings" isimli klasörün içerisine resimlerin vektörlerini csv formatında kaydeder. 
-
--"clustring.py" dosyası çalıştırılarak kaydedilen vektörler okunur ve pca ve kmeans algoritmaları ile veri setinde ilgili görülen datalar "clusters" isimli dizine her class için ayrılarak kaydedilir. Bu clusterlardan ilgisiz görülenler manuel olarak silinmelidir. Birden fazla cluster bir araya getirilirse tekrarlanan veri oluşabilir.
-
--Manuel seçilen datalar yine raw images de kullanılan formatta "dataset" dosya yoluna kopyalanır. Sonrasında "data_splitter.py" çalıştırılır. Bu kod verileri %80-20 olarak şekilde böler ve train dosya formatında "model_dataset" dizinine kaydeder.
+│ ├───bear
 
 
-## Görüntüler
+-Then the "preprocess.py file is executed. When this is run, a directory named "processed_images" is created and the cut and filtered images are saved here. You can specify the maximum and minimum image sizes in the code according to the input to the model. Default: max:1024 min:224
+
+-To apply clustring with kmeans over vectors to identify irrelevant data in the images, first run "get_embeddings.py". This algorithm saves the vectors of the images in csv format in the folder named "embeddings". 
+
+-The saved vectors are read by running "clustring.py" file and the data that are deemed relevant in the dataset with pca and kmeans algorithms are saved in the directory named "clusters" separated for each class. Those deemed irrelevant from these clusters should be deleted manually. If more than one cluster is brought together, duplicate data may occur.
+
+-Manually selected data is copied to the "dataset" file path in the format used in raw images. Then run "data_splitter.py". This code splits the data 80-20% and saves it in train file format in the "model_dataset" directory.
+
+
+## Images
 ----------------------
 ![Ekran görüntüsü 2024-06-19 182220](https://github.com/baloglu321/Animal-classification-with-gradio/assets/98214109/b7c22038-35b4-45df-85a5-245348581623)
 
