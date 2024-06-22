@@ -14,7 +14,7 @@ Pre-processing of images and cutting out irrelevant parts
 
 -Separation of the dataset into training and testing
 
-Training with the -Mobilenetv3_large_100 model
+-Training with the -Mobilenetv3_large_100 model
 
 -Presentation of the model with web interface using Gradio
 
