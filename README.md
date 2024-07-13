@@ -1,4 +1,4 @@
-# Animal-classification-with-gradio
+# Animal-classification-with-Transfer-learning
 
 This project includes the complete development of an artificial intelligence model from start to finish. The project includes data pre-processing, feature extraction, dataset clustering, data separation, model training and presenting the model with a web interface.
 
